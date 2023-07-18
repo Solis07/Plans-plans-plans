@@ -7,7 +7,7 @@ The following challenge tested our skills as developers by creating a quiz with 
 
 ## Website Link
 
-[Work Day Scheduler](https://solis07.github.io/How-well-do-you-know-your-java/)
+[Work Day Scheduler](https://solis07.github.io/Plans-plans-plans/)
 
 ## Screenshot
 
