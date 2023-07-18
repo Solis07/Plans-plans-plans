@@ -7,6 +7,7 @@ $(function () {
 
   var currentTime = dayjs().hour()
   var timeBlock = $(".time-block")
+  var saveBtn = $(".saveBtn")
 
   timeBlock.each(function () {
     var timeBlockId = $(this).attr("id").slice(5)
@@ -16,7 +17,18 @@ $(function () {
       $(this).children(".description").attr("class", "col-8 col-md-10 description future")
     } else if (timeBlockId == currentTime) {
       $(this).children(".description").attr("class", "col-8 col-md-10 description present")
-    }
+    }  
   })
+ 
+  saveBtn.on("click", function (event) {
+    event.preventDefault()
+    var key = $(this).parent().attr("id")
+    var value = $(this).siblings(".description").val()
+    
+    localStorage.setItem(key, JSON.stringify(value))
+  })
+
+
+
 });
 
