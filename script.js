@@ -27,8 +27,9 @@ $(function () {
     
     localStorage.setItem(key, JSON.stringify(value))
   })
-
-
-
+  
+  for (var i = 9; i <= 17; i++) {
+    $(`#hour-${i} textarea`).val(JSON.parse(localStorage.getItem(`hour-${i}`)))
+  }
 });
 
