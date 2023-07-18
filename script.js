@@ -12,6 +12,10 @@ $(function () {
     var timeBlockId = $(this).attr("id").slice(5)
     if (timeBlockId < currentTime) {
       $(this).children(".description").attr("class", "col-8 col-md-10 description past")
+    } else if (timeBlockId > currentTime) {
+      $(this).children(".description").attr("class", "col-8 col-md-10 description future")
+    } else if (timeBlockId == currentTime) {
+      $(this).children(".description").attr("class", "col-8 col-md-10 description present")
     }
   })
 });
