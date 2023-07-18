@@ -1,15 +1,15 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in
+// Wraps all the code that interacts with the DOM in a jQuery call.
 $(function () {
-  var dateEl = $("#currentDay")
-  dateEl.text(dayjs().format("MMMM D YYYY"))
 
-  var currentTime = dayjs().hour()
+
+  var dateEl = $("#currentDay")
   var timeBlock = $(".time-block")
   var saveBtn = $(".saveBtn")
 
+  dateEl.text(dayjs().format("MMMM D YYYY"))
+  
   timeBlock.each(function () {
+    var currentTime = dayjs().hour()
     var timeBlockId = $(this).attr("id").slice(5)
     if (timeBlockId < currentTime) {
       $(this).children(".description").attr("class", "col-8 col-md-10 description past")
