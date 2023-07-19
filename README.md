@@ -10,4 +10,4 @@ The following assignment required the developer to create functions using jQuery
 
 ## Screenshot
 
-![Work Day Scheduler](./assets/img/code-quiz.jpeg)
+![Work Day Scheduler](./assets/img/day-scheduler.jpeg)
